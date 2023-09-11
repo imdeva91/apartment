@@ -70,7 +70,7 @@ const CreateListing = () => {
   }, []);
 
   if (loading) {
-    return <Spinner />;
+    return <h1>Loading</h1>;
   }
 
   //mutate func
