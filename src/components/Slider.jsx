@@ -5,22 +5,21 @@ import "../Styles/Slider.css"
 
 import {
   collection,
-  getDoc,
+
   query,
   limit,
   orderBy,
   getDocs,
 } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
-import { async } from "@firebase/util";
 import Spinner from "./Layout/Spinner";
 
 function Slider() {
   const [listings, setListings] = useState(null);
   const [loding, setLoding] = useState(true);
   const navigate = useNavigate();
-  const userPic =
-    "https://openclipart.org/download/247319/abstract-user-flat-3.svg";
+  // const userPic =
+  //   "https://openclipart.org/download/247319/abstract-user-flat-3.svg";
 
   useEffect(() => {
     const fetchListing = async () => {
@@ -38,7 +37,7 @@ function Slider() {
       setLoding(false);
     };
     fetchListing();
-    console.log(listings === null ? "loding" : listings);
+    // console.log(listings === null ? "loding" : listings);
     // eslint-disable-next-line
   }, []);
 
